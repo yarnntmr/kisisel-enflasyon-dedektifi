@@ -55,4 +55,22 @@ select:focus {
   outline: none;
   border-color: #2f5d8a;
 }
+h2 {
+  text-align: center;
+  color: #1f2433;
+}
+
+#harcama-listesi {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#harcama-listesi li {
+  background-color: white;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
 }
