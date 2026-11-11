@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harcama Ekle</title>
+</head>
+<body>
+    <h1>Harcama Ekle</h1>
+
+    <form>
+        <div>
+            <label for="tutar">Tutar (TL)</label>
+            <input type="number" id="tutar" name="tutar" min="0" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori" required>
+                <option value="">Seçiniz</option>
+                <option value="market">Market</option>
+                <option value="kira">Kira</option>
+                <option value="ulasim">Ulaşım</option>
+                <option value="fatura">Fatura</option>
+                <option value="abonelik">Abonelik</option>
+                <option value="diger">Diğer</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="tarih">Tarih</label>
+            <input type="date" id="tarih" name="tarih" required>
+        </div>
+
+        <button type="submit">Kaydet</button>
+    </form>
+</body>
+</html>
