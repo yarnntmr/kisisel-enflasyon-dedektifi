@@ -35,8 +35,9 @@ erDiagram
         int id PK
         int user_id FK
         int category_id FK
-        text name
         text brand
+        text name
+        text variant
         text unit_type
     }
 
