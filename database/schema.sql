@@ -22,3 +22,22 @@ CREATE TABLE expenses (
   amount NUMERIC(12, 2) NOT NULL CHECK (amount > 0),
   expense_date DATE NOT NULL
 );
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  category_id INTEGER NOT NULL REFERENCES categories(id),
+  brand TEXT NOT NULL,
+  name TEXT NOT NULL,
+  variant TEXT NOT NULL,
+  unit_type TEXT NOT NULL CHECK (unit_type IN ('g', 'ml', 'adet')),
+  UNIQUE (user_id, brand, name, variant, unit_type)
+);
+
+CREATE TABLE price_records (
+  id SERIAL PRIMARY KEY,
+  product_id INTEGER NOT NULL REFERENCES products(id),
+  record_date DATE NOT NULL,
+  store TEXT,
+  price NUMERIC(12, 2) NOT NULL CHECK (price > 0),
+  quantity NUMERIC(12, 2) NOT NULL CHECK (quantity > 0)
+);
